@@ -1,0 +1,6 @@
+*.swp
+~*
+flag
+*.o
+*.s
+*.core
