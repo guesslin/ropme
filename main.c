@@ -1,10 +1,32 @@
 #include <stdio.h> 
 
+int banner();
+int ropme();
+int welcome();
+
 int main(void) { 
-	char name[64]; 
-	printf("%p\n", name);  // Print address of buffer. 
-	puts("What's your name?"); 
-	gets(name); 
-	printf("Hello, %s!\n", name); 
+	banner();
+	ropme();
 	return 0; 
+}
+
+int ropme() {
+	char name[128];
+	printf("%p\n", name); // print the buffer base address
+	puts("What's your name?");
+	gets(name);
+	printf("Hello, %s!\n", name);
+	return 0;
+}
+
+int banner() {
+	printf("\n");
+	printf("######                                   \n");
+	printf("#     #  ####  #####        #    # ######\n");
+	printf("#     # #    # #    #       ##  ## #     \n");
+	printf("######  #    # #    # ##### # ## # ##### \n");
+	printf("#   #   #    # #####        #    # #     \n");
+	printf("#    #  #    # #            #    # #     \n");
+	printf("#     #  ####  #            #    # ######\n");
+	printf("\n");
 }
