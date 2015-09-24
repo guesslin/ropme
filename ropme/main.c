@@ -11,7 +11,7 @@ int main(void) {
 }
 
 int ropme() {
-	char name[128];
+	char name[64];
 	printf("%p\n", name); // print the buffer base address
 	puts("What's your name?");
 	gets(name);
