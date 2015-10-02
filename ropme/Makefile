@@ -4,7 +4,7 @@ EXEC := ropme
 .PHONY: all
 
 all:
-	$(CC) -w -ggdb -fno-stack-protector -o $(EXEC) $(SRCS)
+	$(CC) -w -fno-stack-protector -o $(EXEC) $(SRCS)
 	execstack -s $(EXEC)
 
 dep:
