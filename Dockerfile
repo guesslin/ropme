@@ -14,4 +14,4 @@ RUN make clean dep all
 
 EXPOSE 5555
 
-ENTRYPOINT ncat -k -m 30 -l -e "/usr/bin/setarch x86_64 -R /opt/ropme/ropme" 5555
+ENTRYPOINT ncat -k -l -e "/usr/bin/setarch x86_64 -R /opt/ropme/ropme" 5555
